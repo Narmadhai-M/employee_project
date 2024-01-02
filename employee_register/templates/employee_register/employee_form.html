@@ -1,0 +1,22 @@
+{% extends "employee_register/base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+
+<form action="" method="post" autocomplete="off">
+    {%csrf_token%}
+    
+    <!-- {{ form }} -->
+    <!-- {{ form.as_p }} -->
+    <p style="color: red;">{{ form.as_p }}</p>
+
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <!-- {% if form.errors.username %}
+        <p style="color: red;">{{ form.errors.username.0 }}</p>
+    {% endif %} -->
+</form>
+
+
+{% endblock content %}
